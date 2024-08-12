@@ -11,10 +11,4 @@ public class FirstprojectApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(FirstprojectApplication.class, args);
 	}
-
-	@GetMapping
-	public String HelloWorld() {
-		return "Hello World";
-	}
-
 }
