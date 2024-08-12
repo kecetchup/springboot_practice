@@ -8,7 +8,13 @@ import org.springframework.web.bind.annotation.GetMapping;
 public class FirstController {
     @GetMapping("/hi")
     public String niceToMeetYou(Model model){
-        model.addAttribute("username","찬호");
+        model.addAttribute("username","홍길동");
         return "greetings"; //templates/greetings/mustache -> 브라우저로 전송
     }
+    @GetMapping("/bye")
+    public String SeeYouNextTime(Model model){
+        model.addAttribute("nickname","홍길동");
+        return "goodbye"; //templates/greetings/mustache -> 브라우저로 전송
+    }
+
 }
