@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Board Details</title>
+</head>
+<body>
+<h1 th:text="${board.title}">Board Title</h1>
+<p th:text="${board.content}">Board Contents</p>
+<p>Creator: <span th:text="${board.creatorId}">Creator ID</span></p>
+<p>Create Date: <span th:text="${board.createDate}">Create Date</span></p>
+<p>Update Date: <span th:text="${board.updateDate}">Update Date</span></p>
+<a th:href="@{/board/edit/{id}(id=${board.boardIdx})}">Edit</a>
+<form th:action="@{/board/delete/{id}(id=${board.boardIdx})}" method="post">
+    <button type="submit">Delete</button>
+</form>
+<a href="/boardList">Back to List</a>
+</body>
+</html>
